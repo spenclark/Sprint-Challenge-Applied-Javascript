@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+<!-- The Document object model is what we use to manipluate HTML through JS. -->
+
 2. What is an event?
 
+<!-- An event is when effects are given to HTML elements  -->
+
 3. What is an event listener?
+<!-- 
+an event listner is a piece of code that waits for conditions to be met before executing a event.  -->
 
 4. Why would we convert a NodeList into an Array?
 
+<!-- having a array lets us use methods that we otherwise couldnt like forEach and Map. Its also a lot cleaner and easier to follow. -->
+
 5. What is a component?
+<!-- 
+A component is resuable code that lets developers cleanly add and affect elements  -->
 
 ### Git Set up
 
