@@ -17,3 +17,58 @@
 // </div>
 //
 // Create a card for each of the articles and add the card to the DOM.
+
+function createCard(headline, authorPhoto, authorName) {
+    // card div
+    const cardDiv = document.createElement('div')
+    cardDiv.classList.add('card')
+
+    // div headiline
+    const cardHead = document.createElement('div')
+    cardHead.classList.add('headline')
+    cardHead.textContent = headline;
+    cardDiv.appendChild(cardHead)
+
+    // div author
+    const cardAut = document.createElement('div')
+    cardAut.classList.add('author')
+    cardDiv.appendChild(cardAut)
+
+    // div img
+    const cardImgDiv = document.createElement('div')
+    cardImgDiv.classList.add('img-container')
+    cardAut.appendChild(cardImgDiv)
+
+    // img appended to div img
+    const cardImg = document.createElement('img')
+    cardImg.src = authorPhoto
+    cardImgDiv.appendChild(cardImg)
+
+    // span appended to author
+    const cardAuthor = document.createElement('span')
+    cardAuthor.textContent = authorName
+    cardAut.appendChild(cardAuthor)
+
+    return cardDiv
+}
+
+// http request
+axios
+    .get('https://lambda-times-backend.herokuapp.com/articles')
+    .then((response) => {
+
+        console.log(response.data)
+
+        response.data.articles['bootstrap'].forEach((article) => {
+            var addCard = createCard(article.headline, article.authorPhoto, article.authorName)
+            articleContainer.appendChild(addCard)
+        })
+    })
+   
+        
+
+
+// append to article html
+const articleContainer = document.querySelector('cards-container')
+
+// articleContainer.appendChild(createCard)
