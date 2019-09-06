@@ -18,4 +18,30 @@
   </div>
 */
 
+// GET IMGS with call imgCaro
+const caroEventGrab = document.getElementsByClassName('imgCaro')
 
+function createCaro() {
+  const carouselDiv = document.createElement('div')
+  carouselDiv.classList.add('carousel')
+
+  const img1 = document.createElement('img')
+  img1.classList.add('imgCaro')
+  img1.src = "./assets/carousel/mountains.jpeg"
+
+  const img2 = document.createElement('img')
+  img2.classList.add('imgCaro')
+  img2.src = "./assets/carousel/computer.jpeg"
+
+  const img3 = document.createElement('img')
+  img3.classList.add('imgCaro')
+  img3.src = "./assets/carousel/trees.jpeg"
+
+  const img4 = document.createElement('img')
+  img4.classList.add('imgCaro')
+  img4.src = "./assets/carousel/turntable.jpeg"
+
+  const spanRight = document.createElement('span')
+  spanRight.classList.add('right-button')
+
+}

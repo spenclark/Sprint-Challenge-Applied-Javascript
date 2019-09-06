@@ -58,9 +58,10 @@ axios
     .then((response) => {
 
         console.log(response.data)
-
+        
         response.data.articles['bootstrap'].forEach((article) => {
             var addCard = createCard(article.headline, article.authorPhoto, article.authorName)
+            console.log(addCard)
             articleContainer.appendChild(addCard)
         })
         response.data.articles['technology'].forEach((article) => {
@@ -75,17 +76,8 @@ axios
             var addCard = createCard(article.headline, article.authorPhoto, article.authorName)
             articleContainer.appendChild(addCard)
         })
-
-
-
-
-
-
-
+        
     })
    
-        
-
-
-// append to article html
+// grab card container
 const articleContainer = document.querySelector('cards-container')
