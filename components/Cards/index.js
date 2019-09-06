@@ -63,6 +63,25 @@ axios
             var addCard = createCard(article.headline, article.authorPhoto, article.authorName)
             articleContainer.appendChild(addCard)
         })
+        response.data.articles['technology'].forEach((article) => {
+            var addCard = createCard(article.headline, article.authorPhoto, article.authorName)
+            articleContainer.appendChild(addCard)
+        })
+        response.data.articles['jquery'].forEach((article) => {
+            var addCard = createCard(article.headline, article.authorPhoto, article.authorName)
+            articleContainer.appendChild(addCard)
+        })
+        response.data.articles['node'].forEach((article) => {
+            var addCard = createCard(article.headline, article.authorPhoto, article.authorName)
+            articleContainer.appendChild(addCard)
+        })
+
+
+
+
+
+
+
     })
    
         
@@ -70,5 +89,3 @@ axios
 
 // append to article html
 const articleContainer = document.querySelector('cards-container')
-
-// articleContainer.appendChild(createCard)
